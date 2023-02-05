@@ -5,3 +5,4 @@ class Constants {
 
 }
  const primaryColor = 0xff100B20;
+ const kGtSectraFine = 'GT Sectra Fine';

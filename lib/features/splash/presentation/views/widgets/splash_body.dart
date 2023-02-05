@@ -1,8 +1,9 @@
 import 'package:bookly_app/core/utils/assets.dart';
+import 'package:bookly_app/features/main_screen/presentation/views/home.dart';
 import 'package:bookly_app/features/splash/presentation/views/widgets/animated_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
-import '../splash.dart';
 import 'animated_photo.dart';
 
 class SplashBodyScreen extends StatefulWidget {
@@ -22,20 +23,15 @@ class _SplashBodyScreenState extends State<SplashBodyScreen>
   void initState() {
     super.initState();
 
-    animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    slidingAnimation =
-        Tween<Offset>(begin: const Offset(0.0, 4), end: Offset.zero)
-            .animate(animationController);
+    initSlideAnimation1();
+    initSlideAnimation2();
+    navigateToHome();
+  }
 
-    animationController.forward();
-    animationController2 =
-        AnimationController(vsync: this, duration: const Duration(seconds: 1));
-    slidingAnimation2 =
-        Tween<Offset>(begin: const Offset(0.0, -4), end: Offset.zero)
-            .animate(animationController2);
-
-    animationController2.forward();
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(() => const HomeScreen(), transition: Transition.fadeIn);
+    });
   }
 
   @override
@@ -58,5 +54,25 @@ class _SplashBodyScreenState extends State<SplashBodyScreen>
         AnimatedText(slidingAnimation: slidingAnimation)
       ],
     );
+  }
+
+  void initSlideAnimation2() {
+    animationController2 =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    slidingAnimation2 =
+        Tween<Offset>(begin: const Offset(0.0, -4), end: Offset.zero)
+            .animate(animationController2);
+
+    animationController2.forward();
+  }
+
+  void initSlideAnimation1() {
+    animationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0.0, 4), end: Offset.zero)
+            .animate(animationController);
+
+    animationController.forward();
   }
 }
