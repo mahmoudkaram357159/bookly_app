@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets.dart';
 
-class CustomListViewItem extends StatelessWidget {
-  const CustomListViewItem({
+class CustomBookItem extends StatelessWidget {
+  const CustomBookItem({
     super.key,
   });
 

@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/main_screen/presentation/views/widgets/custome_listview_item.dart';
+import 'package:bookly_app/features/main_screen/presentation/views/widgets/custom_book_item.dart';
 import 'package:flutter/material.dart';
 
 class CustomListView extends StatelessWidget {
@@ -13,11 +13,10 @@ class CustomListView extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 20.0),
         child: ListView.builder(
-            
             scrollDirection: Axis.horizontal,
             itemCount: 10,
             itemBuilder: ((context, index) {
-              return const CustomListViewItem();
+              return const CustomBookItem();
             })),
       ),
     );
