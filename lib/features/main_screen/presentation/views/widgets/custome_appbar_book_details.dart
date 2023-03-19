@@ -7,20 +7,27 @@ class CustomAppBarBookDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-            onPressed: () {
-              GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
-            },
-            icon: const Icon(Icons.close)),
-        const Spacer()
-        ,IconButton(
-            onPressed: () {
-              //GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
-            },
-            icon: const Icon(Icons.shopping_cart_outlined)),
-      ],
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 16,
+        ),
+        child: Row(
+          children: [
+            IconButton(
+                onPressed: () {
+                  GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+                },
+                icon: const Icon(Icons.close)),
+            const Spacer(),
+            IconButton(
+                onPressed: () {
+                  //GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+                },
+                icon: const Icon(Icons.shopping_cart_outlined)),
+          ],
+        ),
+      ),
     );
   }
 }

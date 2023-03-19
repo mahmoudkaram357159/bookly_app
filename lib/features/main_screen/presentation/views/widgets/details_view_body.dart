@@ -16,14 +16,7 @@ class DetailsViewBody extends StatelessWidget {
             child: Column(
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const SafeArea(
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                      top: 16,
-                    ),
-                    child: CustomAppBarBookDetails(),
-                  ),
-                ),
+                const CustomAppBarBookDetails(),
                 const BookDetailsSection(),
                 const Expanded(
                   child: SizedBox(
