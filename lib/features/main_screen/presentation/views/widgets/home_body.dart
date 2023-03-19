@@ -1,10 +1,8 @@
-
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/main_screen/presentation/views/widgets/best_list_item.dart';
 import 'package:bookly_app/features/main_screen/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/features/main_screen/presentation/views/widgets/custome_listView.dart';
 import 'package:flutter/material.dart';
-
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
