@@ -14,8 +14,9 @@ class CustomListViewSmiler extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: 10,
           itemBuilder: ((context, index) {
-            return const CustomBookItem(
+            return const   CustomBookItem(
               spaceBetweenItem: 5,
+              url: "https://images-na.ssl-images-amazon.com/images/I/51ZyIuB1ZaL._SX331_BO1,204,203,200_.jpg",
             );
           })),
     );
